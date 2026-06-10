@@ -1,0 +1,373 @@
+// The Swift Programming Language
+// https://docs.swift.org/swift-book
+
+@main
+struct SwiftPlayground {
+    static func main() {
+// Boolean 
+// how you define if it is true our false
+// != - jerry is not tom
+// == - jerry is jerry 
+// > lhs is greater in value than rhs    total > 0
+// < lhs is lesser in value than rhs     counter < 100
+// >= lhs is greater than or equal in value to rhs  age >= 18
+// <= lhs is lesser than or equal in value to rhs    length <= 2.5
+
+// divide age by 2. 
+// if there is no remainder 
+//the age is even
+
+// If statements 
+
+print("Enter your score")
+let userScore = Int(readLine()!)!
+
+if userScore >= 85 {
+print("You have passed!")
+} else if userScore >= 51 && userScore <= 75 {
+    print("Try again! You have not passed! Silly") 
+} else if userScore >= 0 && userScore <= 50 { 
+print ("Give up! You'll never make it") }
+
+// Arrays 
+let adultFares: [Int] = [800,1200,1500]
+let childFares: [Int] = [400,600,750]
+let ticketsTypes: [String] = ["24-hour","48-hour","72-hour"]
+
+print(adultFares)
+print (childFares)
+print(ticketsTypes) 
+
+print("Are you a Adult or a Child?")
+let userInput = (readLine()!)
+
+print("What ticket do you want?")
+let ticketType = Int(readLine()!)!  
+
+
+if userInput == "Adult" {
+    print(adultFares[ticketType - 1])
+} else if userInput == "Child" {
+    print(childFares[ticketType - 1])
+} else {
+    print("Adult or Child only, please.")
+    print("other aquintist are now allowed!")
+}
+
+let items = ["Potion","Ether","Repel"]
+
+items.forEach { item in 
+print(item)
+}
+
+
+
+(15...30).forEach {number in 
+print(number)}
+
+stride(from:2000, to: 2026, by: 4).forEach{ i in
+print(i)
+}
+
+stride(from:100, to: 0, by: -1).forEach { i in
+
+if i%3 == 0 {
+print("No remainder for \(0)") 
+    } else { 
+print("Remainder for \(0) is \(i%3)")
+    }
+}
+
+print("Ticket prices")
+
+var isRunning = true
+var price = 0
+while isRunning {
+    print("C. for a Child ticket $8")
+    print("A. for a Adult ticket $12")
+    print("S. for a Senior Citizen $10")
+    print("Q. to quit")
+    print("Enter a option:") 
+    let userInput = readLine()!
+
+    if userInput == "C" {
+        print("Child fare $8")
+    } 
+    if userInput == "A" {
+        print("Adult fare $12")
+    }
+    if userInput == "S" {
+        print("Senior Citizen fare $10")
+    } else if userInput == "Q" {
+        isRunning = false
+    }
+    if userInput == "A" {
+        print("Adult fare added.")
+        price += 12
+    }
+    if userInput == "C" {
+        print("Child fare added.")
+        price += 8
+    }
+    if userInput == "S" {
+        print("Senior Citizen added.")
+        price += 10
+    }
+    if userInput == "Q" {
+        print("Thank you for purchasing our tickets: $\(price)")
+    }
+}
+
+var invitees: [String] = []
+var asking = true 
+while asking {
+    print("Who do you want at the party")
+    let invitee = readLine()! 
+    if invitee == ""{
+        asking = false
+    
+    } else { 
+        invitees.append(invitee)
+    }
+}
+    var deleting = true 
+    while deleting{
+        print("Who would you like to remove?")
+        let removedInvitee = readLine()!
+        if removedInvitee == ""{
+            deleting = false
+        } else {
+            if let index = invitees.firstIndex(of:removedInvitee){
+                invitees.remove(at:index)
+            }
+        }
+        }
+        print("invitees are:")
+        invitees.forEach{name in 
+        print(name)
+        }
+        let numberOfInvitees = invitees.count
+        if numberOfInvitees == 0 {
+            print("No one was invited")
+        } else if numberOfInvitees <= 5{
+            print("average party - not to big not to small :)")
+        } else if numberOfInvitees <= 10{
+            print("BIGGG PARTY :((((((")
+        }
+
+        invitees.enumerated().forEach{ index, name in
+        print("\(index + 1). \(name)")
+        }
+
+let bears = ["Mama","Papa","Baby","Goldilocks"]
+
+if bears.contains("Goldilocks") {
+    print("OH NO! They ate her!")
+}
+let names = ["Zach","Tana","Dan"]
+let ages = [15,15,15]
+
+let people = Array(zip(names,ages))
+var ageAsking = true
+people.forEach { person in
+print("\(person.0) is \(person.1) years old.")}
+
+while ageAsking {
+print("What is your age?")
+if let input = readLine(), let age = Int(input) {
+    if age <= 0 || age >= 122 {
+        print("Age incorrect.")
+        ageAsking = false
+    } else if age <= 18 {
+        print("Too young.")
+        ageAsking = false
+    } else {
+        print("You may enter")
+    ageAsking = false
+    }
+} else {
+    print("Please enter a number.")
+    ageAsking = false
+    }
+    
+
+}
+var mutiMovie = true
+var movieList: [Double] = []
+
+print("Enter the length of the movie in minutes:")
+while mutiMovie {
+if let input = readLine(), let movieLength = Double(input) {
+    if movieLength < 30.0 || movieLength > 300.0 {
+        print("Movie length out of bounds.")
+        mutiMovie = false
+    } else {
+        print("Movie length accepted: \(movieLength) minutes.")
+        movieList.append(movieLength)
+    }
+} else {
+    print("Please enter a valid number for the movie length.")
+    mutiMovie = false
+    }
+for movieList in movieList {
+print(movieList)
+}
+}
+
+
+var age: Double? = nil
+
+
+while age == nil {
+    print("Enter your age:")
+    
+    if let input = readLine(), let enteredAge = Double(input) {
+        if enteredAge < 0 {
+            print("Age cannot be negative. Enter a valid age.")
+        } else if enteredAge < 16 {
+            print("You must be 18 or older. Enter a valid age.")
+        } else {
+            age = enteredAge
+        }
+    } else {
+        print("Invalid input. Enter a valid integer for age.")
+    }}
+
+
+print("Valid age entered: \(age!)")
+
+//price per item
+let pricePerItem = 19.99
+// Quantity.
+let quantity = 3.0
+
+let taxRate = 0.15
+let subtotal = (pricePerItem * quantity)
+let tax = (subtotal * taxRate)
+let total = (subtotal + tax)
+
+print("Price per item: $\(pricePerItem)")
+print("Quantity: \(quantity)")
+print("Subtotal: $\(subtotal)") 
+print("Tax (15%): $\(tax)")
+print("Total: $\(total)")
+
+/// lengh of rectangle
+let length = 12.5
+/// Width of rectangle
+let width = 8.0
+/// Area
+let area = width * length
+let perimeter = 2 * (width * length)
+
+print("The length of the rectangle is \(length) units.")
+print("The width of the rectangle is \(width) units.")
+print("The area of the rectangle is \(area) square units.")
+print("The perimeter of the rectangle is \(perimeter) units.")
+
+// Task 1
+/// Prices for tickets 
+let ticketPrice = 17.5
+let vrExperience = 12.0
+let foodPrice = 8.0
+
+// The amount of people going
+print("How many people are going to Project Hail Mary?")
+var userinput = readLine()!
+let numberOfFriends = Double(userinput)!
+
+
+// Tells users the  ticket price, price of food and Vr experience price
+// Gives the total price 
+let cost = (ticketPrice + vrExperience + foodPrice) * numberOfFriends
+print(" The price of a ticket for Project Hail Mary is $\(ticketPrice). The price of the Popcorn and Soda of choose deal is $\(foodPrice) and finally, the price of the VR Experience is $\(vrExperience). The total cost for all of you is $\(cost).")
+
+// The price for each person
+print("The price per person for Project Hail Mary \(cost / numberOfFriends) ")
+
+// Task 2
+print("When where you born?")
+let usersInput = readLine()!
+let birthYear: Int = Int(usersInput)!
+let currentYear = 2025
+
+let myAge = (currentYear-birthYear)
+
+print("You are \(myAge) years old.")
+
+
+// Asks for users name  
+print("Your name?")
+let name = readLine()!
+
+// Asks user for year level
+print(" Your year level?")
+let yearLevel = readLine()!
+
+// Asks user for what school they go to
+print("Your school?")
+let school = readLine()!
+
+// Tells us what, name, year level and school that person goes to
+print("Hi. I am \(name)")
+print("I go to \(school)")
+print("My year level at \(school) is \(yearLevel) ")
+
+
+/// Prints directions to Times Square from impire state building
+func directionsToTimesSquare() {
+    print("Walk 4 mins to 34th St Herald Square train station.")
+print("Take the Northbound N, Q, R, or W train 1 stop.")
+print("Get off the Times Square 42nd Street stop.")
+print("Take lots of pictures! 📸")
+}
+
+
+/// asks for height and weight
+print("Weighttt?")
+let height: Double = Double(readLine()!)!
+print("Height! HERE")
+let weight: Double = Double(readLine()!)!
+
+/// finds BMI useing weight and height
+func findBMI () {
+    let BMI = weight / (height*height)
+    print(BMI)
+}
+findBMI()
+
+
+print("Enter the first number (left-hand side): ")
+let leftHandSide = Int(readLine()!)!
+print("Enter the second number (right-hand side): ")
+let rightHandSide = Int(readLine()!)!
+
+
+print("Type add or subtract: ")
+let calculationType = readLine()!
+
+
+func add() {
+let answer = leftHandSide + rightHandSide
+print(answer)
+}
+
+
+func subtract() {
+let answer = leftHandSide - rightHandSide
+print(answer)
+}
+
+
+if calculationType == "add"{
+add()
+} else if calculationType == "subtract"{
+subtract()
+}
+
+
+
+}
+
+}
+
