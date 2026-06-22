@@ -11,7 +11,7 @@ print("Welcome to screen time tracker!")
 
 print("What is the hour limit set for each day?")
 print("Enter a number 1-5:")
-if var numberHour <= 5 {
+let numberOfHours = readLine()
 
 }
 
