@@ -5,30 +5,31 @@
 struct SwiftPlayground {
     static func main() {
 
-
-let isRunning = true
-print("Welcome to screen time tracker!")
-// Tells user they are using screen time tracker
+print("Welcome to Screen Time Tracker.")
+var isRunning =  true
+var isRunning2 = true
+let apps: [String] = ["Facebook", "Snapchat", "Instagram", "Discord", "Other"]
+var appUsage: [String: String] = [:]
 
 while isRunning {
 print("What is the hour limit set for each day?")
-print("Enter a number 1-5:")
-if let input = readLine(), let numberOfHours = Int(input) {
-    if numberOfHours > 5 {
-        print("Please enter a number between 1-5.")
-    if numberOfHours 
-    } else {
-        print("You have set yourself a maximum of \(numberOfHours) hours for today!")
+print("Enter a number.")
+let number = Int(readLine()!)!
+print("You have chosen to use a maxium of \(number) for the week")
+isRunning = false
+}
+
+while isRunning2 {
+print("On monday how many hours did you spend on:")
+for app in apps {
+    print("How many hours did you spend on \(app)?")
+
+    if let input = readLine() {
+        appUsage[app] = input
+    
     }
 }
 
-
-
 }
+    }
 }
-}
-
-
-
-
-
