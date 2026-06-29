@@ -43,11 +43,12 @@ for app in apps {
         } else { 
     print("Please enter a number.")
 
+
     }
 }
 
 }
-print("Your total usage time of all apps for Monday is \(totalUsage)")
+
 
 
 
