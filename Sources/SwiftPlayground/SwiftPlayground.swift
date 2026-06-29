@@ -39,17 +39,15 @@ for app in apps {
         
         if inputInt < 0.00 || inputInt > 24.00 {
             print("Out of bounds please use put in your correct screen time.")
-    
         }
         } else { 
     print("Please enter a number.")
-    
-print("Your total usage time of all apps for Monday is \(totalUsage)")
 
     }
 }
 
 }
+print("Your total usage time of all apps for Monday is \(totalUsage)")
 
 
 
