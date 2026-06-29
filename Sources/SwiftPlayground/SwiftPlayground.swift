@@ -27,7 +27,7 @@ isRunning = false
 
 
 
-while isRunning2 {
+while isRunning {
 print("On Monday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
@@ -47,7 +47,7 @@ print("Your total usage time of all apps for Monday is \(totalUsage)")
 
 
     
-    while isRunning3 {
+    while isRunning {
 print("On Wedsenday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
@@ -65,7 +65,8 @@ for app in apps {
 }
 print("Your total usage time of all apps for Wedsenday is \(totalUsage)")
 
-while isRunning4 {
+
+while isRunning {
 print("On Thursday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
