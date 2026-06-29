@@ -133,9 +133,12 @@ for app in apps {
 
         if let hours = Int(input) {
         totalUsage += hours
+        
+        
     }
 }
 }
+
 print("Your total usage time of all apps for Saturday is \(totalUsage)")
 
 
