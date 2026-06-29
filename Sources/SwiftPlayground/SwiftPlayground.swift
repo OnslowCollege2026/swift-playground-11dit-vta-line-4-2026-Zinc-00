@@ -40,10 +40,11 @@ for app in apps {
         if let hours = Int(input) {
         totalUsage += hours
     }
-}
 
 }
+}
 print("Your total usage time of all apps for Monday is \(totalUsage)")
+}
 
 
     
@@ -64,6 +65,7 @@ for app in apps {
 
 }
 print("Your total usage time of all apps for Tuesday is \(totalUsage)")
+    }
 
 
 while isRunning3 {
@@ -82,7 +84,7 @@ for app in apps {
 
 }
 print("Your total usage time of all apps for Wednesday is \(totalUsage)")
-
+}
 
 while isRunning4 {
 print("On Thursday how many hours did you spend on:")
@@ -100,6 +102,7 @@ for app in apps {
 
 }
 print("Your total usage time of all apps for Thursday is \(totalUsage)")
+}
 
 while isRunning5 {
 print("On Friday how many hours did you spend on:")
@@ -117,6 +120,7 @@ for app in apps {
 
 }
 print("Your total usage time of all apps for Friday is \(totalUsage)")
+}
 
 while isRunning6 {
 print("On Saturday how many hours did you spend on:")
@@ -134,6 +138,7 @@ for app in apps {
 }
 print("Your total usage time of all apps for Saturday is \(totalUsage)")
 
+
 while isRunning7 {
 print("On Sunday how many hours did you spend on:")
 var totalUsage: Int = 0
@@ -150,6 +155,7 @@ for app in apps {
 }
 }
 print("Your total usage time of all apps for Sunday is \(totalUsage)")
+}
 
 }
 }
