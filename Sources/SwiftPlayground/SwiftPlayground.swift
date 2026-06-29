@@ -31,7 +31,7 @@ for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let totalUsage: Double
+        var totalUsage: Double = 0.0
         let inputInt = Double(input) ?? 0
         appUsage[app] = input
         if let hours = Double(input) {
