@@ -82,6 +82,60 @@ for app in apps {
 
 }
 print("Your total usage time of all apps for Thursday is \(totalUsage)")
+
+while isRunning4 {
+print("On Thursday how many hours did you spend on:")
+var totalUsage: Int = 0
+for app in apps {
+    print("How many hours did you spend on \(app)?")
+
+    if let input = readLine() { 
+        let inputInt = Int(input) 
+        appUsage[app] = input
+
+        if let hours = Int(input) {
+        totalUsage += hours
+    }
+}
+
+}
+print("Your total usage time of all apps for Friday is \(totalUsage)")
+
+while isRunning5 {
+print("On Friday how many hours did you spend on:")
+var totalUsage: Int = 0
+for app in apps {
+    print("How many hours did you spend on \(app)?")
+
+    if let input = readLine() { 
+        let inputInt = Int(input) 
+        appUsage[app] = input
+
+        if let hours = Int(input) {
+        totalUsage += hours
+    }
+}
+
+}
+print("Your total usage time of all apps for Friday is \(totalUsage)")
+
+while isRunning6 {
+print("On Saturday how many hours did you spend on:")
+var totalUsage: Int = 0
+for app in apps {
+    print("How many hours did you spend on \(app)?")
+
+    if let input = readLine() { 
+        let inputInt = Int(input) 
+        appUsage[app] = input
+
+        if let hours = Int(input) {
+        totalUsage += hours
+    }
+}
+
+}
+print("Your total usage time of all apps for Saturday is \(totalUsage)")
     
     }
 }
