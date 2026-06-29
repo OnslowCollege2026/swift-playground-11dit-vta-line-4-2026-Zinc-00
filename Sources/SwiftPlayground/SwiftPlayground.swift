@@ -29,8 +29,11 @@ for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
+        Int inputInt = Int(input) 
         appUsage[app] = input
+        if inputInt < 0 == inputInt > 24 {
+            print("Out of bounds please use put in your correct screen time.")
+        }
 
         if let hours = Int(input) {
         totalUsage += hours
