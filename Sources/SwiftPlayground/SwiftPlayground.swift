@@ -31,18 +31,24 @@ for app in apps {
     if let input = readLine() { 
         let inputInt = Int(input) ?? 0
         appUsage[app] = input
-        
-        if inputInt < 0 == inputInt > 24 {
-            print("Out of bounds please use put in your correct screen time.")
-        }
-
         if let hours = Int(input) {
         totalUsage += hours
+        
+        if inputInt < 0 || inputInt > 24 {
+            print("Out of bounds please use put in your correct screen time.")
+        } else { 
+print("Your total usage time of all apps for Monday is \(totalUsage)")
+        }
+        } else { 
+    print("Please enter a number.")
+    
+
+
     }
 }
 
 }
-print("Your total usage time of all apps for Monday is \(totalUsage)")
+
 
 
     while isRunning2 {
