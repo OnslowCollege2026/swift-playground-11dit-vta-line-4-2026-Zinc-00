@@ -7,6 +7,13 @@ struct SwiftPlayground {
 
 print("Welcome to Screen Time Tracker.")
 var isRunning =  true
+let isRunning1 = true
+let isRunning2 = true
+let isRunning3 = true
+let isRunning4 = true
+let isRunning5 = true
+let isRunning6 = true
+let isRunning7 = true
 let apps: [String] = ["Facebook", "Snapchat", "Instagram", "Discord", "Other"]
 
 var appUsage: [String: String] = [:]
@@ -21,14 +28,13 @@ isRunning = false
 
 
 
-while isRunning {
+while isRunning1 {
 print("On Monday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
         appUsage[app] = input
 
         if let hours = Int(input) {
@@ -41,18 +47,18 @@ print("Your total usage time of all apps for Monday is \(totalUsage)")
 
 
     
-    while isRunning {
+    while isRunning2 {
 print("On Tuesday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
         appUsage[app] = input
 
         if let hours = Int(input) {
         totalUsage += hours
+        
     }
 }
 
@@ -60,14 +66,13 @@ for app in apps {
 print("Your total usage time of all apps for Tuesday is \(totalUsage)")
 
 
-while isRunning {
+while isRunning3 {
 print("On Wednesday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
         appUsage[app] = input
 
         if let hours = Int(input) {
@@ -79,14 +84,13 @@ for app in apps {
 print("Your total usage time of all apps for Wednesday is \(totalUsage)")
 
 
-while isRunning {
+while isRunning4 {
 print("On Thursday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
         appUsage[app] = input
 
         if let hours = Int(input) {
@@ -97,14 +101,13 @@ for app in apps {
 }
 print("Your total usage time of all apps for Thursday is \(totalUsage)")
 
-while isRunning {
+while isRunning5 {
 print("On Friday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
         appUsage[app] = input
 
         if let hours = Int(input) {
@@ -115,14 +118,13 @@ for app in apps {
 }
 print("Your total usage time of all apps for Friday is \(totalUsage)")
 
-while isRunning {
+while isRunning6 {
 print("On Saturday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
         appUsage[app] = input
 
         if let hours = Int(input) {
@@ -131,17 +133,18 @@ for app in apps {
 }
 
 }
+}
 print("Your total usage time of all apps for Saturday is \(totalUsage)")
 
-while isRunning {
+while isRunning7 {
 print("On Sunday how many hours did you spend on:")
 var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) 
         appUsage[app] = input
+        
 
         if let hours = Int(input) {
         totalUsage += hours
@@ -149,9 +152,10 @@ for app in apps {
 }
 
 }
+}
 print("Your total usage time of all apps for Sunday is \(totalUsage)")
+
+}
+}
+}
     
-    }
-}
-}
-}
