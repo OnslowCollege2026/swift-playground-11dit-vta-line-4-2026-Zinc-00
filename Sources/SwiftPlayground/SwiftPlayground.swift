@@ -131,8 +131,6 @@ for app in apps {
         totalUsage += hours
     }
 }
-
-}
 }
 print("Your total usage time of all apps for Saturday is \(totalUsage)")
 
@@ -150,12 +148,7 @@ for app in apps {
         totalUsage += hours
     }
 }
-
-}
 }
 print("Your total usage time of all apps for Sunday is \(totalUsage)")
-
 }
 }
-}
-    
