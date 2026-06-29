@@ -9,8 +9,6 @@ print("Welcome to Screen Time Tracker.")
 var isRunning =  true
 var isRunning2 = true
 let apps: [String] = ["Facebook", "Snapchat", "Instagram", "Discord", "Other"]
-let hours: Double = 0.00
-
 
 var appUsage: [String: String] = [:]
 
@@ -26,27 +24,29 @@ isRunning = false
 
 while isRunning2 {
 print("On Monday how many hours did you spend on:")
-var totalUsage: Int = []
+var totalUsage: Int = 0
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        var totalUsage: Double = 0.0
-        let inputInt = Double(input) ?? 0
+        let inputInt = Int(input) ?? 0
         appUsage[app] = input
-        if let hours = Double(input) {
-        totalUsage += hours
         
-        if inputInt < 0.00 || inputInt > 24.00 {
+        if inputInt < 0 || inputInt > 24 {
             print("Out of bounds please use put in your correct screen time.")
+        } else { 
+print("Your total usage time of all apps for Monday is \(totalUsage)")
         }
         } else { 
     print("Please enter a number.")
+    
+
+        if let hours = Int(input) {
+        totalUsage += hours
     }
 }
-print("Your total usage time of all apps for Monday is \(totalUsage)")
-}
 
+}
 
 
 
@@ -62,7 +62,6 @@ for app in apps {
 
         if let hours = Int(input) {
         totalUsage += hours
-
     }
 }
 
