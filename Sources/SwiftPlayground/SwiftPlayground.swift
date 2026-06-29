@@ -10,6 +10,7 @@ var isRunning =  true
 var isRunning2 = true
 let apps: [String] = ["Facebook", "Snapchat", "Instagram", "Discord", "Other"]
 let hours: Double = 0.00
+let total
 
 var appUsage: [String: String] = [:]
 
@@ -33,7 +34,7 @@ for app in apps {
         let inputInt = Double(input) ?? 0
         appUsage[app] = input
         if let hours = Double(input) {
-        totalUsage += Int(hours)
+        totalUsage += hours
         
         if inputInt < 0.00 || inputInt > 24.00 {
             print("Out of bounds please use put in your correct screen time.")
