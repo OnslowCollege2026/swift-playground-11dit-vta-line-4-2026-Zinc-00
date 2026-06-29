@@ -10,7 +10,7 @@ var isRunning =  true
 var isRunning2 = true
 let apps: [String] = ["Facebook", "Snapchat", "Instagram", "Discord", "Other"]
 let hours: Double = 0.00
-let total
+let totalUsage: Double = 0.0
 
 var appUsage: [String: String] = [:]
 
