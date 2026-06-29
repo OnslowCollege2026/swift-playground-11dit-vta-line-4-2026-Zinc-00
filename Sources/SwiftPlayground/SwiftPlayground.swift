@@ -29,12 +29,12 @@ for app in apps {
     print("How many hours did you spend on \(app)?")
 
     if let input = readLine() { 
-        let inputInt = Int(input) ?? 0
+        let inputInt = Double(input) ?? 0
         appUsage[app] = input
-        if let hours = Int(input) {
+        if let hours = Double(input) {
         totalUsage += hours
         
-        if inputInt < 0 || inputInt > 24 {
+        if inputInt < 0.00 || inputInt > 24.00 {
             print("Out of bounds please use put in your correct screen time.")
         } else { 
 print("Your total usage time of all apps for Monday is \(totalUsage)")
