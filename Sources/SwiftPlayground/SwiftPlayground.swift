@@ -26,7 +26,7 @@ isRunning = false
 
 while isRunning2 {
 print("On Monday how many hours did you spend on:")
-var totalUsage: Int = 0
+var totalUsage: Int = []
 for app in apps {
     print("How many hours did you spend on \(app)?")
 
@@ -42,11 +42,9 @@ for app in apps {
         }
         } else { 
     print("Please enter a number.")
-
-
     }
 }
-
+print("Your total usage time of all apps for Monday is \(totalUsage)")
 }
 
 
