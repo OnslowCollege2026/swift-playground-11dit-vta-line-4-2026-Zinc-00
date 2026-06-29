@@ -62,6 +62,8 @@ for app in apps {
 
         if let hours = Int(input) {
         totalUsage += hours
+
+        if 
     }
 }
 
