@@ -74,7 +74,7 @@ for app in apps {
         if let hours = Int(input) {
         perDayUsage += hours
 
-/// Sets limit to what you can enter for how many hours u spent on certain apps 
+/// Sets limit to what you can enter for how many hours you spent on certain apps 
     if let appLimit = Int(input) {
     if appLimit >= minuimScreenTimeApp,
     appLimit <= maxiumScreenTimeApp {
