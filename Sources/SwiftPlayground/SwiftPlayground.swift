@@ -74,6 +74,7 @@ for app in apps {
         if let hours = Int(input) {
         perDayUsage += hours
 
+/// Sets limit to what you can enter for how many hours u spent on certain apps 
     if let appLimit = Int(input) {
     if appLimit >= minuimScreenTimeApp,
     appLimit <= maxiumScreenTimeApp {
@@ -87,6 +88,7 @@ for app in apps {
     totalUsage += perDayUsage
     }
 }
+/// Gives users total for each day
 print("Your total usage time of all apps for \(days) is \(perDayUsage)")
 isRunning = false
 }
@@ -95,15 +97,15 @@ isRunning = false
 
 let averageUsage = Int(perDayUsage) / Int(days.count)
 
+/// Summaray 
 print("SUMMARAY")
 print("=-----=")
+/// this adds numbers to total mysteriously
 print("This week you have spent a total of \(totalUsage)")
+/// this doesnt work at all
 print("Your average screen time per day this week is \(averageUsage) hours")
-
-
-
-
 }
     }
-    
+    /// I tried my best
+    /// Im going to practce over the holidays 
 
